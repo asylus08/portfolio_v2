@@ -12,9 +12,18 @@ import HTML from './assets/language/html.png'
 import Python from './assets/language/python.png'
 import CSS from './assets/language/css.png'
 
+import Godot from './assets/tools/godot.svg'
+import VSCode from './assets/tools/vs-code.svg'
+import Firebase from './assets/tools/firebase.svg'
+import Github from './assets/tools/github.svg'
+
+import ReactLogo from './assets/framworks/react.svg'
+
 function App() {
 
-  const images = [CSharp, Java, JS, HTML, CSS, Python]
+  const languages = [CSharp, Java, JS, HTML, CSS, Python]
+  const tools = [Godot, VSCode, Firebase, Github]
+  const frameworks = [ReactLogo]
 
   return (
     
@@ -23,9 +32,9 @@ function App() {
       <Hero/>
       <h1 className="title">What I Use</h1>
       <hr className="slash"/>
-      <Slider logos={images}/>
-      <SliderReverse logos={images}/>
-      <Slider logos={images}/>
+      <Slider logos={tools}/>
+      <SliderReverse logos={languages}/>
+      <Slider logos={frameworks}/>
       <h1 className="title">Professional Experience</h1>
       <hr className="slash"/>
       <h1 className="title">Projects</h1>

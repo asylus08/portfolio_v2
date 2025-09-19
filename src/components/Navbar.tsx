@@ -8,6 +8,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const downloadCV = (selectedLanguage: string) => {
+
+    const pdfUrl = selectedLanguage == "en" ? "/myPDF/alec_pham_resume_eng.pdf" : "/myPDF/alec_pham_resume_fr.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = selectedLanguage == "en" ? "alec_pham_resume_eng.pdf" : "alec_pham_resume_fr.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -21,8 +32,13 @@ const Navbar = () => {
         <div className="dropdown">
           <button className="dropbtn">Download CV</button>
           <div className="dropdown-content">
-            <a href="#internship">French</a>
-            <a href="#freelance">English</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); downloadCV("en"); }}>
+              In English
+            </a>
+
+            <a href="#" onClick={(e) => { e.preventDefault(); downloadCV("fr"); }}>
+              In French
+            </a>
           </div>
         </div>
         <a href="#projects">Projects</a>
