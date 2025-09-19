@@ -1,0 +1,78 @@
+.hero-section {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    gap: 2rem;                  
+    padding: 40px 20px;
+    flex-wrap: wrap;    
+    background-color: white;         
+}
+
+.hero-text {
+    text-align: left;             
+    max-width: 800px;            
+}
+
+.hero-title {
+    font-size: 60px;
+}
+
+.hero-title-wrapper {
+    display: flex;
+    align-items: center;       
+    gap: 0.5rem;              
+  }
+  
+
+  .waving-hand {
+    width: 40px;              
+    height: auto;
+    transform-origin: 70% 70%; 
+    animation: wave 1.5s infinite;
+  }
+  
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(15deg); }
+    30% { transform: rotate(-10deg); }
+    45% { transform: rotate(15deg); }
+    60% { transform: rotate(-10deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .quick-stats {
+    margin-top: 10px;
+  }
+  
+  .profile-pic {
+    margin-left: 100px;
+    flex: 0 0 250px;            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+.profile-pic img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+}
+
