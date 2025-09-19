@@ -1,53 +1,80 @@
 .hero-section {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
-    gap: 2rem;                  
-    padding: 40px 20px;
-    flex-wrap: wrap;    
-    background-color: white;         
+    padding: 20px;
+    width: 100%;
+    /* full width */
+    height: 100vh;
+    /* full viewport height */
+    background-color: white;
+    /* or your background color */
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* allow stacking on mobile */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.025);
 }
 
 .hero-text {
-    text-align: left;             
-    max-width: 800px;            
+    text-align: left;
+    max-width: 800px;
 }
 
 .hero-title {
     font-size: 60px;
 }
 
+.hero-title-specialty {
+    font-size: 60px;
+}
+
 .hero-title-wrapper {
     display: flex;
-    align-items: center;       
-    gap: 0.5rem;              
-  }
-  
+    align-items: center;
+    gap: 0.5rem;
+}
 
-  .waving-hand {
-    width: 40px;              
+
+.waving-hand {
+    width: 40px;
     height: auto;
-    transform-origin: 70% 70%; 
+    transform-origin: 70% 70%;
     animation: wave 1.5s infinite;
-  }
-  
-  @keyframes wave {
-    0% { transform: rotate(0deg); }
-    15% { transform: rotate(15deg); }
-    30% { transform: rotate(-10deg); }
-    45% { transform: rotate(15deg); }
-    60% { transform: rotate(-10deg); }
-    75% { transform: rotate(15deg); }
-    100% { transform: rotate(0deg); }
-  }
+}
 
-  .quick-stats {
-    margin-top: 10px;
-  }
-  
-  .profile-pic {
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    45% {
+        transform: rotate(15deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.profile-pic {
     margin-left: 100px;
-    flex: 0 0 250px;            
+    flex: 0 0 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +84,7 @@
 .profile-pic img {
     width: 100%;
     object-fit: cover;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -76,3 +103,97 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* slight upward motion */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero-title-wrapper h1 {
+    animation: fadeIn 0.8s ease forwards;
+    /* Hi! fades in first */
+    animation-delay: 0s;
+    opacity: 0;
+    /* start hidden */
+}
+
+.hero-title-specialty {
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.5s;
+    /* delayed after Hi! */
+    opacity: 0;
+}
+
+.waving-hand {
+    animation: wave 1.5s infinite, fadeIn 0.8s ease forwards;
+    animation-delay: 0s;
+    opacity: 0;
+    /* start hidden */
+}
+
+.introduction h1:nth-of-type(2) {
+    /* "I'm a software developer" */
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.5s;
+    /* delayed after Hi! */
+    opacity: 0;
+}
+
+.introduction p {
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 1s;
+    /* delayed further */
+    opacity: 0;
+}
+
+.quick-stats {
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.stats-btn {
+    margin-top: 10px;
+    border-radius: 50px;
+    margin-right: 20px;
+    background-color: #222222;
+    border: none;
+}
+
+.stats-btn:hover {
+    background-color: #222222;                      
+    border-color: #e4d2c7;             
+    box-shadow: 10px 10px 40px #a28d65;      
+    transform: scale(1.05);                         
+}
+  
+
+.stats-btn:hover p {
+    color: white;
+}
+
+.stats-btn p {
+    font-size: 1rem;
+    margin: 0;  
+    color: white;
+  }
+
+  .stats-btn:hover h2 {
+    color: white;
+}
+
+.stats-btn h2 {
+    color: white;
+}
+
+  
