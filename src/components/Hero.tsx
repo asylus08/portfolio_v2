@@ -1,6 +1,6 @@
 import '../style/Hero.css'
 import WavingHand from '../assets/waving-hand.png'
-import ProfilePicture from '../assets/placeholder.png'
+import ProfilePicture from '../assets/portrait.png'
 
 
 function Hero() {
