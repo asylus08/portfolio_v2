@@ -16,8 +16,15 @@ const Navbar = () => {
 
       <div
         className={`navbar-right ${isOpen ? "active" : ""}`}
-        onClick={() => setIsOpen(false)} 
+        onClick={() => setIsOpen(false)}
       >
+        <div className="dropdown">
+          <button className="dropbtn">Download CV</button>
+          <div className="dropdown-content">
+            <a href="#internship">French</a>
+            <a href="#freelance">English</a>
+          </div>
+        </div>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>

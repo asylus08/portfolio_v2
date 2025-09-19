@@ -1,0 +1,41 @@
+.slider-reverse {
+    padding-top: 10px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+
+}
+
+.slider-reverse .list-reverse {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.slider-reverse .list-reverse .item-reverse {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRunRight 20s linear infinite;
+    animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1));
+}
+
+.slider-reverse .list-reverse .item-reverse .img {
+    width: 100%;
+}
+
+@keyframes autoRunRight {
+    from {
+        left: 100%
+    } to {
+        left: calc(var(--width) * -1);
+    }
+}

@@ -38,6 +38,7 @@ html, body {
 .navbar-right a {
   margin-left: 1.5rem;
   text-decoration: none;
+  font-size: large;
   font-weight: 500;
   color: #2d2d2d;
   transition: color 0.3s ease;
@@ -101,3 +102,47 @@ html, body {
     text-align: center;
   }
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  color: #2d2d2d;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-size: large;
+  
+}
+
+.dropbtn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #2d2d2d;
+  transition: background 0.2s;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+

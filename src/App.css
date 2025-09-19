@@ -1,10 +1,10 @@
 .slash {
     width: 50%;
-    border: none;           /* removes the default hr line */
-    border-top: 2px solid #e4d2c7; /* custom line */
-    margin: 1rem auto;      /* centers it */
+    border: none;          
+    border-top: 2px solid #e4d2c7;
+    margin: 1rem auto;     
   }
-.what-i-use {
+.title{
     margin-top: 10px;
     text-align: center;
 }

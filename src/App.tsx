@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Slider from './components/Slider'
+import SliderReverse  from './components/SliderReverse'
 
 import CSharp from './assets/language/cSharp.png'
 import Java from './assets/language/java.png'
@@ -20,9 +21,20 @@ function App() {
      <body>
       <Navbar/>
       <Hero/>
-      <h1 className="what-i-use">What I Use</h1>
+      <h1 className="title">What I Use</h1>
       <hr className="slash"/>
       <Slider logos={images}/>
+      <SliderReverse logos={images}/>
+      <Slider logos={images}/>
+      <h1 className="title">Professional Experience</h1>
+      <hr className="slash"/>
+      <h1 className="title">Projects</h1>
+      <hr className="slash"/>
+
+      <h1 className="title">Education</h1>
+      <hr className="slash"/>
+      
+
      </body>
 
   )
