@@ -4,14 +4,10 @@
     align-items: center;
     padding: 20px;
     width: 100%;
-    /* full width */
     height: 100vh;
-    /* full viewport height */
     background-color: white;
-    /* or your background color */
     box-sizing: border-box;
     flex-wrap: wrap;
-    /* allow stacking on mobile */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.025);
 }
 
@@ -107,7 +103,6 @@
     0% {
         opacity: 0;
         transform: translateY(20px);
-        /* slight upward motion */
     }
 
     100% {
@@ -119,16 +114,13 @@
 
 .hero-title-wrapper h1 {
     animation: fadeIn 0.8s ease forwards;
-    /* Hi! fades in first */
     animation-delay: 0s;
     opacity: 0;
-    /* start hidden */
 }
 
 .hero-title-specialty {
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 0.5s;
-    /* delayed after Hi! */
     opacity: 0;
 }
 
@@ -136,21 +128,17 @@
     animation: wave 1.5s infinite, fadeIn 0.8s ease forwards;
     animation-delay: 0s;
     opacity: 0;
-    /* start hidden */
 }
 
 .introduction h1:nth-of-type(2) {
-    /* "I'm a software developer" */
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 0.5s;
-    /* delayed after Hi! */
     opacity: 0;
 }
 
 .introduction p {
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 1s;
-    /* delayed further */
     opacity: 0;
 }
 
